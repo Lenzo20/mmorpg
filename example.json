@@ -1,0 +1,65 @@
+{
+  "username": "Lenzo",
+  "japanase": "レンゾ",
+  "romaji": "ren-zo",
+  "Characterístics": {
+    "description": [
+      {
+        "race": "Human",
+        "gender": "male",
+        "age": 21,
+        "hair": [
+          {
+            "current": "golden bloden"
+          }
+        ],
+        "eyeColor": "dark Brown",
+        "height": "165cm (5,5)"
+      }
+    ]
+  },
+  "ProfessionalStatus": {
+    "description": [
+      {
+        "affilition": "Benicios",
+        "ocupation": "Painter",
+        "level": 3,
+        "achievedFloor": 80
+      }
+    ]
+  },
+  "Habilidades": {
+    "description": [
+      {
+        "strength": "C601",
+        "endurance": "D540",
+        "dexterity": "S970",
+        "agility": "S980",
+        "charisma": "F350",
+        "luck": "G",
+        "magic": "B",
+        "hunter": "G"
+      }
+    ]
+  },
+  "SkillMagicAndEquipament": {
+    "description": [
+      {
+        "skill": {
+          "1": "Execut",
+          "2": "Full Force Release || MAgic Apocalypse",
+          "3": "Extreme Regeneration"
+        },
+        "magic": {
+          "1": "Incursio",
+          "2": "First of Serenity",
+          "3": "Energy Sight"
+        },
+        "weapon": {
+          "main": "Reaike",
+          "secondary": "Fuu-jin"
+        }
+      }
+    ]
+  }
+}
