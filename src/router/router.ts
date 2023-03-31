@@ -1,6 +1,7 @@
 import { Router } from "express";
-import { NotFoundError } from "../halpers/apiError";
+
 import mmorpgControllers from "../controllers/mmorpgControllers";
+import { NotFoundError } from "../halpers/apiError";
 
 const router = Router();
 
@@ -9,5 +10,8 @@ router.get("/test", () => {
 });
 
 router.get("/findRpg", mmorpgControllers.find);
+router.post("/findRpg", mmorpgControllers.created);
+router.delete("/findRpg/:id", mmorpgControllers.delete);
+router.put("/findRpg/:id", mmorpgControllers.update);
 
 export default router;

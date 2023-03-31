@@ -1,9 +1,12 @@
 import { model, Schema } from "mongoose";
-import { isAutoAccessorPropertyDeclaration } from "typescript";
 
 interface MmorpgInterface extends Document {
   username: string;
   Characterístics: object;
+  ProfessionalStatus: object;
+  Habilidades: object;
+  PersonalStatus: object;
+  SkillMagicAndEquipament: object;
 }
 
 const Mmorpg = new Schema({
@@ -35,7 +38,7 @@ const Mmorpg = new Schema({
         }]
       },
       eyeColor: String,
-      height: Number,
+      height: String,
     }]
   },
   ProfessionalStatus: {
@@ -52,11 +55,12 @@ const Mmorpg = new Schema({
         type: [1, 2, 3, 4, 5, 6, 7, 8, 9],
         default: 1,
       },
-      achievedFloor: String,
+      achievedFloor: Number,
     }]
   },
   Habilidades: {
-    type: [{
+    type: Array,
+    description: [{
       strength: {
         type: String,
         default: "I 1",
@@ -116,16 +120,17 @@ const Mmorpg = new Schema({
     }
   },
   SkillMagicAndEquipament: {
-    type: [{
+    type: Array,
+    description: [{
       skill: {
-        type: String,
+        type: Array,
       },
       magic: {
-        type: String,
+        type: Array,
         default: null,
       },
       weapon: {
-        type: String,
+        type: Array,
       }
     }]
   }
