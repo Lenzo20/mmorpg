@@ -10,8 +10,10 @@ router.get("/test", () => {
 });
 
 router.get("/findRpg", mmorpgControllers.find);
+router.get("/findRpg/:id", mmorpgControllers.findOne);
 router.post("/findRpg", mmorpgControllers.created);
 router.delete("/findRpg/:id", mmorpgControllers.delete);
 router.put("/findRpg/:id", mmorpgControllers.update);
 
+router.get("/example", mmorpgControllers.example);
 export default router;
