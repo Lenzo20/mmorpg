@@ -45,7 +45,7 @@
 
 ## Races
 
-### Amazonaz
+### Amazonas
 
 - Aqueles de uma raça Demi Humana devem acasalar com outros da mesma raça para ter filhos. As únicas exceções a isso são humanos e amazonas, que podem ter filhos de qualquer raça. Os elfos têm baixas taxas de natalidade em comparação com as outras raças devido à sua longa expectativa de vida.
 
