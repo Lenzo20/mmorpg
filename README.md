@@ -144,7 +144,27 @@
 
 ## Monstros
 
-### em breve
+### Chefão de andar
+
+#### andar 19º
+
+- Aparencia parecida com a de um humano
+- Alta resistencia fisica
+- Alta regeneração, podendo recuperar membros perdidos em segundos
+- Lança poder de plasma pela boca
+- Ele fica preso no gelo na parede em um salão no perto da entrada para o 20º andar
+
+#### andar 25º
+
+- Dragão aquatico e terrestre, mas sem terreno habitual é a água onde fica mais forte
+- Tem duas cabeças
+
+  - Uma solta um gás que anula qualquer tipo de magia lança
+  - A outra solta um fogo azul que não se apaga de maneira normal, só com porções de curas
+
+- Consegue invocar animais maritimos para ajudar quando esta encuralado
+
+#### em breve mais...`
 
 ## Masmorra
 
