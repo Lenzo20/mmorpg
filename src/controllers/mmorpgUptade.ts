@@ -11,7 +11,6 @@ interface CharacterísticsInterface {
   };
   eyeColor?: string;
   height?: string;
-
 }
 
 interface ProfessionalStatusInterface {
@@ -73,6 +72,53 @@ interface HabilidadesInterface {
     default: "I",
   },
 
+}
+
+interface PersonalStatusInterface {
+  status: ["alive", "dead"];
+}
+
+interface SkillMagicAndEquipamentInterface {
+  skill: {
+    1: {
+      type: string,
+      default: null,
+    },
+    2: {
+      type: string,
+      default: null,
+    },
+    3: {
+      type: string,
+      default: null,
+    }
+  },
+  magic: {
+    type: object,
+    1: {
+      type: string,
+      default: null,
+    },
+    2: {
+      type: string,
+      default: null,
+    },
+    3: {
+      type: string,
+      default: null,
+    },
+  } | null,
+  weapon: {
+    type: object,
+    main: {
+      type: string,
+      default: null
+    },
+    secondary: {
+      type: string,
+      default: null
+    },
+  }
 }
 
 class mmorpgUpdate {
@@ -155,6 +201,59 @@ class mmorpgUpdate {
       mmorpgs.Habilidades[0].hunter = value.hunter;
 
     return mmorpgs.Habilidades[0];
+  }
+
+  async PersonalStatus(value: PersonalStatusInterface, id: string) {
+    const mmorpgs = await Mmorpg.findById(id);
+
+    if (!mmorpgs)
+      throw new NotFoundError("Not Found");
+
+    if (value.status)
+      mmorpgs.PersonalStatus.status = value.status;
+
+    mmorpgs.save();
+
+    return mmorpgs.PersonalStatus;
+  }
+
+  async SkillMagicAndEquipament(value: SkillMagicAndEquipamentInterface, id: string) {
+    const mmorpgs = await Mmorpg.findById(id);
+
+    if (!mmorpgs)
+      throw new NotFoundError("Not Found");
+
+    if (value.skill) {
+      if (value.skill[1])
+        mmorpgs.SkillMagicAndEquipament[0].skill[1] = value.skill[1];
+
+      if (value.skill[2])
+        mmorpgs.SkillMagicAndEquipament[0].skill[2] = value.skill[2];
+
+      if (value.skill[3])
+        mmorpgs.SkillMagicAndEquipament[0].skill[3] = value.skill[3];
+    }
+
+    if (mmorpgs.SkillMagicAndEquipament[0].magic) {
+      if (value.magic) {
+        if (value.magic[1])
+          mmorpgs.SkillMagicAndEquipament[0].magic[1] = value.magic[1];
+
+        if (value.magic[2])
+          mmorpgs.SkillMagicAndEquipament[0].magic[2] = value.magic[2];
+
+        if (value.magic[3])
+          mmorpgs.SkillMagicAndEquipament[0].magic[3] = value.magic[3];
+      }
+    }
+
+    if (value.weapon) {
+      mmorpgs.SkillMagicAndEquipament[0].weapon = value.weapon;
+    }
+
+    mmorpgs.save();
+
+    return mmorpgs.SkillMagicAndEquipament[0];
   }
 }
 
